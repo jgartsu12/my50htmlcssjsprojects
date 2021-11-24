@@ -19,3 +19,13 @@ body {
 .container {
   text-align: center;
 }
+
+.progress-container {
+  display: flex; /*puts numbers in flex row */
+  justify-content: space-between; /*take remaining space between numbers and put around the elements*/
+  /* position so can place things inside of it absolute */
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
