@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
+/* define custom properties by putting them in a scope*/
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -28,4 +34,53 @@ body {
   margin-bottom: 30px;
   max-width: 100%;
   width: 350px;
+}
+
+.progress-container::before {
+  /* need content when using before or after */
+  content:''; 
+  /* faint grey line behind it */
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%; /*rep the empty line behind it*/
+  /* set behind circles */
+  z-index: -1;
+}
+
+/* create progress line */
+.progress {
+  background-color: #3498db;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  /* set behind circles */
+  z-index: -1;
+  transition: .4s ease;
+}
+
+/* circles */
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  /* dispaly items in circles center: */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #e0e0e0;
+  transition: .4s ease;
+}
+
+.circle.active {
+  border-color: #3498db;
 }
