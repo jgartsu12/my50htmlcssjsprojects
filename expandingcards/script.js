@@ -3,10 +3,11 @@ const panels = document.querySelectorAll('.panel');
 
 // event listener on each panel DIV so if they are clicked they expand
 panels.forEach((panel) => {
-    // event listener listens for a click, when event happens run a function
     panel.addEventListener('click', () => {
-        // when a click occurs on the page, prints this to console
-        console.log('eventlistener heard click');
+        // console.log('eventlistener heard click');
+        // if panel clicked on we want to add class of active, we use classlist to add active to panel- panel active div class
+        panel.classList.add('active');
+        // console.log('panel should expand when clicked');
     });
 
 });
