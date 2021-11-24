@@ -40,7 +40,7 @@ body {
   /* need content when using before or after */
   content:''; 
   /* faint grey line behind it */
-  background-color: #e0e0e0;
+  background-color: var(--line-border-empty);
   position: absolute;
   top: 50%;
   left: 0px;
@@ -53,7 +53,7 @@ body {
 
 /* create progress line */
 .progress {
-  background-color: #3498db;
+  background-color: var(--line-border-fill);
   position: absolute;
   top: 50%;
   left: 0px;
@@ -77,10 +77,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid #e0e0e0;
+  border: 3px solid var(--line-border-empty);
   transition: .4s ease;
 }
 
 .circle.active {
-  border-color: #3498db;
+  border-color: var(--line-border-fill);
 }
