@@ -53,6 +53,8 @@ body {
 .panel.active h3 {
   /* show h3 if active */
   opacity: 1; 
+  /* eliminate falling down effect of h3 when card expands */
+  transition: opacity 0.3s ease-in 0.4s; /* .4s delay */
 }
 
 /* if screen is small only show 3 panels using media query */
