@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  /* flex-direction: column; turned into flex row by default so this makes it column if needed */
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff; /*color of text*/
+  cursor: pointer; /*finger mouse when hover over image*/
+  flex: 0.5; /* makes them even around page */
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute; /* must be absolute since panel position is relative */
+  bottom: 20px;
+  left: 20px;
+  margin: 0px;
+  /* dont show h3 only if not active */
+  opacity: 0;
+}
+
+.panel.active {
+  /* make wider when active/clicked on */
+  flex: 5; 
+}
+
+.panel.active h3 {
+  /* show h3 if active */
+  opacity: 1; 
+}
+
+/* if screen is small only show 3 panels using media query */
+
+@media(max-width: 480px) {
+  /* styles only take effect if max width is 480px */
+  .container {
+    width: 100vw;
+  }
+
+  /* remove last 2 panels using pseudo-selector */
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
