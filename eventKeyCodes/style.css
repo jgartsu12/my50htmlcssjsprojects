@@ -16,6 +16,7 @@ body {
   margin: 0;
 }
 
+/* box for each key code type */
 .key {
   border: 1px solid #999;
   background-color: #eee;
@@ -33,7 +34,7 @@ body {
 
 .key small {
   position: absolute;
-  top: -24px;
+  top: -24px; /* bring out of the box */
   left: 0;
   text-align: center;
   width: 100%;
