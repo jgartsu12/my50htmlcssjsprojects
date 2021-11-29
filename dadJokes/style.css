@@ -19,7 +19,8 @@ body {
 
 .container {
   background-color: #fff;
-  border-radius: 10px;
+  /* border-radius gives rounded corners */
+  border-radius: 10px; 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   padding: 50px 20px;
   text-align: center;
@@ -33,6 +34,7 @@ h3 {
   letter-spacing: 2px;
 }
 
+/* joke fetched from the api */
 .joke {
   font-size: 30px;
   letter-spacing: 1px;
